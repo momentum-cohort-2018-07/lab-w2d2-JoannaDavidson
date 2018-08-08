@@ -75,11 +75,26 @@ function minimum (numbers) {
 // https://courses.cs.vt.edu/csonline/Algorithms/Lessons/SelectionSort/index.html
 // to see how. This may make more sense to you.
 
-
+function selectionSort(array) {
+  if (array.length === 0) {
+    return array; 
+  }
+  var arrayCopy = array.slice(0);
+  arrayCopy.sort(function (a, b) {return a - b});
+  return arrayCopy;
+}
 
 // 6. Create a function called "createUser" that takes a name and a Date object
 // and returns an object with the keys "name" and "dob" (date of birth) with
 // those values.
+
+// function createUser (name, date) {
+//   var person = {
+//     name: "",
+//     dob: ""
+//   }
+
+// }
 
 // 7. Create a function called "calculateAge" that takes a user created from
 // createUser and a Date object considered the current date, and calculates the user's
